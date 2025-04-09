@@ -1,13 +1,30 @@
+import java.util.Scanner;
 public class Principal {
     public static void main(String[] args) {
-        Entrada entrada1 = new Entrada("Obra de Teatro", 450);
-        Entrada entrada2= new Entrada("Festival Ceremonia", 4856);
+        Scanner entrada = new Scanner(System.in);
+        Paciente paciente1 = new Paciente();
 
-       entrada1.mostrarInformacion();
-       entrada2.mostrarInformacion();
+        System.out.print("Ingresa el nombre del paciente:");
+        paciente1.nombre = entrada.nextLine();
 
-        //Uso del record
-        Entrada_Record entrada3 = new Entrada_Record("Corona Capital", 5678);
-                entrada3.mostrarInformacion();
+        System.out.print("Ingresa la edad del paciente:");
+        paciente1.edad = entrada.nextInt();
+        entrada.nextLine();
+
+        System.out.print("Ingresa el número de expediente:");
+        paciente1.noexp = entrada.nextLine();
+
+        System.out.println();
+
+
+        paciente1.mostrarInformacion();
+
+
+
+
     }
 }
+
+
+
+
